@@ -1,0 +1,321 @@
+body{
+  padding: 17px;
+}
+
+#conciseView:checked{
+}
+
+.app{
+  overflow: hidden;
+}
+
+.hidden{
+  display: none;
+}
+
+.IOItem{
+  width: 99%;
+  float: left;
+  border: 2px solid rgba(120,120,255,0.5);
+  overflow: hidden;
+  margin-bottom:4px;
+  position: relative;
+}
+
+.IOItem textarea{
+  width: 99%;
+  height: 60px;
+  resize: vertical;
+}
+
+.IOItem .typeSelect{
+  color: white;
+  background-color: rgba(32, 48, 147,0.9);
+}
+
+.IOItem .close{
+  color: white;
+  position: absolute;
+  background-color: rgba(32, 48, 147,0.9);
+  right: 1px;
+  border: solid 1px pink;
+}
+
+.IONew{
+  float: left;
+  border: 2px solid rgba(120,120,255,0.5);;
+  width: 99%;
+  overflow:hidden;
+}
+.IOItemNew{
+  min-height: 60px;
+  width: 49%;
+  border: 1px solid black;
+  -webkit-transition: all 0.618s; /* Safari */
+  transition: all 0.618s;
+}
+
+.IOItemNew:hover:not(:focus):before{
+  content:'Enter text, paste HTML elements, or Enter Data URI' !important;
+  line-height: 30px;
+  color: rgba(0,0,0,0.6);
+}
+
+@media(min-width: 754px){
+  .IOItemNew:hover:not(:focus):before{
+    line-height: 60px;
+  }
+}
+
+.IOItemNew:focus{
+  background-color: white;
+  width:99%;
+}
+
+.IOItemNew:focus ~ .fileInput{
+  width: 0px;
+  border: 0px;
+  overflow: hidden;
+}
+
+.IOItemNew,.add{
+  float:left;
+}
+
+.title{
+  color: #0065d9;
+  font-weight:bold;
+}
+
+.IONew .title{
+  display: block !important;
+  width: 100%;
+  text-align:center;
+}
+
+.fileInput:before{
+  content: 'File';
+}
+
+.fileInput{
+  color: rgba(0,0,0,0.6);
+  border: 2px dashed grey;
+  float: left;
+  min-height: 58px;
+  width: 49%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 58px;
+  -webkit-transition: width 0.618s; /* Safari */
+  transition: width 0.618s;
+}
+
+.fileInput:hover{
+  line-height: 29px !important;
+}
+
+.fileInput:hover:before{
+  content: 'Drag and drop files or click to select ';
+}
+
+@media(min-width: 530px){
+  .fileInput:hover:before{
+    line-height: 58px;
+  }
+}
+
+.add{
+  background-color: rgba(9, 0, 255, 0.57);
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  -webkit-transition: height 0.618s; /* Safari */
+  transition: height 0.618s;
+}
+
+.IOItemNew:empty:not(:focus) {
+  text-align: center;
+}
+
+[contentEditable=true]:empty:not(:focus):not(:hover):before{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  color: rgba(0,0,0,0.6);
+  content:attr(data-text)
+}
+
+[contentEditable=true] ~ .add{
+  display: block;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+[contentEditable=true]:empty:not(:focus) ~ .add{
+  height: 0px;
+  overflow: hidden;
+}
+
+.IOItem .title{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: -1;
+}
+
+.app-in,.app-out{
+  background-color: rgba(120,120,255,0.1);
+  margin-top:8px;
+  overflow:hidden;
+}
+
+.app-out{
+  min-height:30px;
+}
+
+.app-in{
+  display: none;
+}
+
+#pipe-in .app-in{
+  display: block;
+}
+#pipe-in .app-in textarea{
+}
+
+.addMore:checked ~ *{
+  display:none;
+}
+
+.app-dashboard{
+  float:left;
+  width: 200px;
+  min-height: 60px;
+  position: relative;
+  padding: 8px;
+}
+.app-display{
+}
+
+.app-icon{
+}
+
+
+.app-title{
+  display: block;
+  float: left;
+  margin: 0px;
+}
+
+
+
+.icon-info {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(100,100,210,0.9);
+  display: block;
+  float: right;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon-info:before {
+  content: "i";
+  margin-left: 11px;
+  font-size: 32px;
+  vertical-align: middle;
+  line-height: 32px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.app-run{
+  font-weight: bold;
+  color: white;
+  margin:auto;
+  width: 90%;
+  background-color: rgba(100,100,210,0.9);
+}
+
+.app-info-icon{
+}
+
+.app-main{
+  overflow: hidden;
+}
+
+.app-info-brief{
+  float: left;
+  margin-right: 8px;
+  background-color: rgba(173, 244, 255, 0.56);
+  height: 60px;
+}
+
+.app-info-credit-elem{
+  float: left;
+  margin-left: 8px;
+}
+
+.f-left{
+  float: left;
+}
+
+.f-right{
+  float: right;
+}
+
+.app-info-credit{
+  background-color: rgba(244, 173, 255, 0.56);
+  overflow: hidden;
+}
+
+.app-info-credit-header{
+  float: left;
+  line-height: 60px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.app-info{
+  -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+  transform: rotateY(180deg);
+  -webkit-transition: all 0.618s; /* Safari */
+  transition: all 0.618s;
+  backface-visibility: hidden;
+  height:0px;
+}
+
+.app-info .app-info-brief{
+  height: 0px;
+}
+
+.app-info .app-info-credit{
+  height: 0px;
+}
+
+.app-info-switch{
+  display: none;
+}
+
+.app-info-switch:checked{
+  width: 100px;
+}
+
+.app-info-switch:checked ~ .app-info{
+  -webkit-transform: rotateY(360deg); /* Chrome, Safari, Opera */
+  transform: rotateY(360deg);
+  height: 60px;
+}
+
+.app-info-switch:checked ~ .app-info .app-info-brief{
+  height: 60px;
+}
+
+.app-info-switch:checked ~ .app-info .app-info-credit{
+  height: 60px;
+}
